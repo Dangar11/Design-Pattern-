@@ -1,12 +1,16 @@
 import UIKit
-
 /*:
+ # Strategy
+ - - - - - - - - - -
+ ![Strategy Diagram](Strategy_Diagram.png)
  
- ![alternate text ](Strategy_Diagram.png)
+ The strategy pattern defines a family of interchangeable objects.
  
+ This pattern makes apps more flexible and adaptable to changes at runtime, instead of requiring compile-time changes.
  */
-
-//<Protocol> Strategy
+/*:
+ ## <Protocol> Strategy
+*/
 public protocol MovieRatingStrategy {
   
   //Show wich Service provide rating "Rotten Tomatoes"
@@ -17,6 +21,10 @@ public protocol MovieRatingStrategy {
 }
 
 
+/*:
+ ## Concreate Strategy 1
+ ## CLIENT: - ROTTEN TOMATOES
+ */
 //Concreate Strategy 1
 //CLIENT: - ROTTEN TOMATOES
 public class RottenTomatoesClien: MovieRatingStrategy {
@@ -35,10 +43,10 @@ public class RottenTomatoesClien: MovieRatingStrategy {
 }
 
 
-
-//Concreate Strategy 2
-//CLIENT: - IMDbClient
-
+/*:
+ ## Concreate Strategy 2
+ ## CLIENT: - IMDbClient
+ */
 
 public class IMDbClient: MovieRatingStrategy {
   
@@ -54,8 +62,9 @@ public class IMDbClient: MovieRatingStrategy {
 }
 
 
-
-//Object using a Strategy
+/*:
+ ## Object using a Strategy
+ */
 
 public class MoviewRatingVC: UIViewController {
   
