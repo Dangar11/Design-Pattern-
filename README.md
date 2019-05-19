@@ -1,4 +1,4 @@
-# Design-Pattern-
+# Design-Pattern Swift
 The most common and advance Design Pattern in Swift
 
 Playground example include all files with building patterns diagram
